@@ -12,7 +12,10 @@ export class MapsService {
     navigator.geolocation.getCurrentPosition(
       (response) => {
         const { latitude, longitude } = response.coords;
+        console.log(response.coords);
+        
         this.center = { lat: latitude, long: longitude }
+
       }
 
     );
